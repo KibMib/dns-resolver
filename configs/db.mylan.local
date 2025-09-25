@@ -1,0 +1,11 @@
+$TTL    604800
+@       IN      SOA     ns.mylan.local. admin.mylan.local. (
+                          1         ; Serial
+                     604800         ; Refresh
+                      86400         ; Retry
+                    2419200         ; Expire
+                     604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.mylan.local.
+ns      IN      A       192.168.0.110  ; VM’s static IP
+www     IN      A       192.168.0.110  ; Example record
