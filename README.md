@@ -21,7 +21,7 @@ A DNS resolver built with BIND9 on a virtual machine (Ubuntu Server) for LAN.
 - `configs/named.conf.local`: Local zone config.
 - `configs/db.mylan.local`: Zone file for `mylan.local`.
 
-##File Locations
+## File Locations
 - `/etc/netplan/01-netcfg.yaml`: Netplan config file.
 - `/etc/bind`: BIND9 default directory for its config (i.e. main config, zone, zone config) files.
 - `/var/log/named/query.log`: Log file. If not present create one.
