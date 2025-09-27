@@ -38,4 +38,4 @@ Or, set LAN WiFi Router or APs DNS to VM's IP, so it will get shared with DHCP.
 
 - Now run `watchbind` and watch live queries.
 - Demo Video:
-![](watchbind.mp4)
+![](watchbind.gif)
