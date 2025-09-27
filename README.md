@@ -6,6 +6,7 @@ A DNS resolver built with BIND9 on a virtual machine (Ubuntu Server) for LAN.
 - Caching DNS resolver using BIND9.
 - Custom local domain (`mylan.local`) with sample records.
 - Restricted to LAN queries for security.
+- Logging all queries.
 
 ## Setup Instructions
 1. Create a VM with Ubuntu Server in VirtualBox.
@@ -15,10 +16,15 @@ A DNS resolver built with BIND9 on a virtual machine (Ubuntu Server) for LAN.
 5. Test with: `dig @192.168.0.110 google.com` or `dig @192.168.0.110 www.mylan.local`.
 
 ## Files
-- `configs/01-netcfg.yaml`: netplan config for statis IP
+- `configs/01-netcfg.yaml`: Netplan config for static IP.
 - `configs/named.conf.options`: BIND9 main config.
 - `configs/named.conf.local`: Local zone config.
 - `configs/db.mylan.local`: Zone file for `mylan.local`.
+
+##File Locations
+- `/etc/netplan/01-netcfg.yaml`: Netplan config file.
+- `/etc/bind`: BIND9 default directory for its config (i.e. main config, zone, zone config) files.
+- `/var/log/named/query.log`: Log file. If not present create one.
 
 ## Usage
 Set LAN devices DNS to the VM’s IP (e.g., `192.168.0.110`).

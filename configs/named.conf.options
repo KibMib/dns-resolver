@@ -9,3 +9,11 @@ options {
     dnssec-validation auto;
     listen-on { 192.168.0.110; };
 };
+
+logging {
+    channel query.log {
+        file "/var/log/named/query.log";
+        severity debug;
+    };
+    category queries { query.log; };
+};
