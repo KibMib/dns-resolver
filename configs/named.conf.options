@@ -13,6 +13,7 @@ options {
 logging {
     channel query.log {
         file "/var/log/named/query.log";
+        print-time yes;
         severity debug;
     };
     category queries { query.log; };
